@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://91.185.85.239:3306/demarket
+    username: demarket
+    password: A5veWgUGcwx5Th@o23jAukShlimRQ2opIDFQUgfFLtNG24tyMNPLSqggRJrynzwt
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+server:
+  port: 8081
