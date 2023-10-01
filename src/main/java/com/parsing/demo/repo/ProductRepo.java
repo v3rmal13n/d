@@ -31,7 +31,7 @@ public interface ProductRepo extends JpaRepository<Product, Integer> {
 //            nativeQuery = true)
 //    Page<ProductsProjection> searchProducts(@Param("query") String query, @Param("sortByPriceAscending") boolean sortByPriceAscending, Pageable pageable);
 
-    @Query(value = "SELECT p.id, p.name, p.categoryid, p.imagepath, p.price, p.url " +
+    @Query(value = "SELECT p.id, p.name, p.subcategoryid, p.imagepath, p.price, p.url " +
             "FROM product p " +
             "WHERE p.name LIKE %:query% " +
             "AND (:minPrice IS NULL OR p.price >= :minPrice) " +
@@ -50,8 +50,8 @@ public interface ProductRepo extends JpaRepository<Product, Integer> {
 
     List<Product> findByNameContaining(String query, Sort sort);
 
-    @Query("SELECT p FROM Product p WHERE p.categoryid = :categoryId")
-    List<Product> findByCategory(@Param("categoryId") Integer categoryId);
+    @Query("SELECT p FROM Product p WHERE p.subcategoryid = :subcategoryId")
+    List<Product> findBySubcategory(@Param("subcategoryId") Integer subcategoryId);
 
 
 }

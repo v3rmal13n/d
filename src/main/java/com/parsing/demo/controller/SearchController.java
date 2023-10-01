@@ -44,7 +44,7 @@ public class SearchController {
                 projection -> new ProductDTO(
                         projection.getId(),
                         projection.getName(),
-                        projection.getCategoryid(),
+                        projection.getSubcategoryid(),
                         projection.getImagepath(),
                         projection.getPrice(),
                         projection.getUrl()
@@ -62,7 +62,7 @@ public class SearchController {
             Product product = result.get();
             return ResponseEntity.ok(product);
         } else {
-            return ResponseEntity.notFound().build();
+            return null;
         }
     }
 

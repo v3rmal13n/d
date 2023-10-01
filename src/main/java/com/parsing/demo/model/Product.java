@@ -13,7 +13,6 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
-
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
@@ -22,8 +21,8 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "categoryid")
-    private int categoryid;
+    @Column(name = "subcategoryid")
+    private int subcategoryid;
 
     @Column(name = "imagepath")
     private String imagepath;
@@ -45,8 +44,5 @@ public class Product {
 
     @Column(name = "desc")
     private String desc;
-
-    @Column(name = "metaid")
-    private int metaid;
 
 }

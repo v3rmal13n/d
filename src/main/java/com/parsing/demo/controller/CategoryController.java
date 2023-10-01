@@ -27,9 +27,10 @@ public class CategoryController {
     private final ProductRepo productRepo;
     private final SubcategoryRepo subcategoryRepo;
 
-    @GetMapping("/search/byCategory")
-    public List<Product> getProductsByCategory(@RequestParam("categoryId") Integer categoryId) {
-        List<Product> products = productRepo.findByCategory(categoryId);
+    @GetMapping("/search/bySubcategory")
+    public List<Product> getProductsBySubcategory(@RequestParam("subcategoryId") Integer subcategoryId) {
+        List<Product> products = productRepo.findBySubcategory(subcategoryId);
+        logger.info(products.toString());
         return products;
     }
 

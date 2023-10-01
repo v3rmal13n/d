@@ -12,7 +12,6 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Subcategory {
-
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")

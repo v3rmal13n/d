@@ -10,7 +10,7 @@ public interface ProductsProjection {
 
     Integer getId();
     String getName();
-    Integer getCategoryid();
+    Integer getSubcategoryid();
     String getImagepath();
     BigDecimal getPrice();
     String getUrl();
